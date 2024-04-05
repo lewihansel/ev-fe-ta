@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background: white;
+  top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.menus {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.menu {
+  padding: 0.5rem;
+  border-radius: 8px;
+
+  &:hover {
+    font-weight: 600;
+  }
+}

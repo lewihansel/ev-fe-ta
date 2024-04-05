@@ -1,0 +1,77 @@
+@import "./variables.scss";
+
+.productDetailContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  gap: 2rem;
+}
+
+.productImage {
+  flex: 1;
+  width: 600px;
+  aspect-ratio: 7/8;
+  object-fit: contain;
+}
+
+.productInfo {
+  flex: -1;
+  margin: 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.productTitle {
+  @extend .text-5xl;
+  line-height: 120%;
+}
+
+.productPriceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.productPrice {
+  @extend .text-xl;
+
+  &::before {
+    content: "$ ";
+  }
+}
+
+.addToCartButton {
+  @extend .text-lg;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  border-radius: 24px;
+  padding: 0.25rem 1rem;
+  border: 1px solid black;
+}
+
+.productCartCount {
+  @extend .text-sm;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.removeFromCartBtn {
+  @extend .text-sm;
+  background: none;
+  border: none;
+  color: lightcoral;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

@@ -1,0 +1,66 @@
+@import "./variables.scss";
+
+.productsGrid {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.productItem {
+  width: 31%;
+  display: flex;
+  padding: 1rem;
+  position: relative;
+  flex-direction: column;
+  border-radius: $rounded-4;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.02;
+    box-shadow: 0.3px 0.1px 1.7px rgba(0, 0, 0, 0.028),
+      1.1px 0.3px 4.8px rgba(0, 0, 0, 0.038),
+      2.6px 0.8px 11.5px rgba(0, 0, 0, 0.047), 7px 2px 38px rgba(0, 0, 0, 0.07);
+  }
+}
+
+.productImage {
+  width: 100%;
+  aspect-ratio: 7/8;
+  object-fit: contain;
+}
+
+.productInfo {
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.productTitle {
+  @extend .text-xl;
+  flex: 1;
+  font-weight: 500;
+}
+
+.productPrice {
+  @extend .text-xl;
+  font-style: italic;
+
+  &::before {
+    content: "$ ";
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
