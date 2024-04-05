@@ -50,7 +50,7 @@
 
 .productPrice {
   @extend .text-xl;
-  font-style: italic;
+  font-weight: 600;
 
   &::before {
     content: "$ ";
@@ -59,8 +59,20 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .productsGrid {
+    padding: 1rem;
+  }
+  .productItem {
+    width: 98%;
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+  .productsGrid {
+    padding: 1.5rem;
+  }
+  .productItem {
+    width: 47%;
+  }
 }

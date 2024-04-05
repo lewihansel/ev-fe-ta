@@ -42,7 +42,7 @@ export default function CartPage() {
       <div className={`${styles.cartPageContainer}`}>
         <div className={`${styles.cartPageTitle}`}>
           <p>Order total:</p>
-          <p>{`$${cartStore.totalPrice}`}</p>
+          <p>{`$${cartStore.totalPrice.toFixed(2)}`}</p>
         </div>
         <div className={`${styles.cartList}`}>
           {cartStore.cart.map((cart) => (
@@ -61,24 +61,29 @@ export default function CartPage() {
                   className={`${styles.cartItemQuantity}`}
                 >{`quantity: ${cart.quantity}`}</p>
                 <div className={`${styles.buttonGroup}`}>
-                  <button onClick={() => onAddQuantity(cart.product)}>+</button>
+                  <button onClick={() => onAddQuantity(cart.product)}>
+                    ➕
+                  </button>
                   {cart.quantity > 1 && (
                     <button onClick={() => onDecrementQuantity(cart.product)}>
-                      -
+                      ➖
                     </button>
                   )}
-                  <button onClick={() => onRemoveItemFromCart(cart.product)}>
-                    remove
+                  <button
+                    className={`${styles.removeButton}`}
+                    onClick={() => onRemoveItemFromCart(cart.product)}
+                  >
+                    ❌
                   </button>
                 </div>
               </div>
               <div className={`${styles.cartItemPriceContainer}`}>
                 <p className={`${styles.cartItemPrice}`}>
-                  {`$${cart.product.price * cart.quantity}`}
+                  {`$${(cart.product.price * cart.quantity).toFixed(2)}`}
                 </p>
-                <p
-                  className={`${styles.cartItemIndividualPrice}`}
-                >{`${cart.quantity} x $${cart.product.price}`}</p>
+                <p className={`${styles.cartItemIndividualPrice}`}>{`${
+                  cart.quantity
+                } x $${cart.product.price.toFixed(2)}`}</p>
               </div>
             </div>
           ))}

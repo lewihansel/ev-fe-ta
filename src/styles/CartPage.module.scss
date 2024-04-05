@@ -24,6 +24,7 @@
 
 .cartItem {
   display: flex;
+  align-items: flex-start;
   width: 100%;
   gap: 1rem;
 }
@@ -50,7 +51,7 @@
 .cartItemPriceContainer {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .cartItemPrice {
@@ -72,5 +73,39 @@
   background: none;
   border: none;
   cursor: pointer;
-  text-decoration: underline;
+  border: 1px solid black;
+  border-radius: $rounded;
+  padding: 0.25rem;
+  min-width: 34px;
+}
+
+button.removeButton {
+  border-color: red;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .cartPageContainer {
+    padding: 1rem;
+    margin-top: 0;
+  }
+  .cartPageTitle {
+    font-size: 28px;
+    margin-bottom: 2rem;
+  }
+  .cartItemTitle {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .cartItemQuantity {
+    font-size: 12px;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .cartPageContainer {
+    padding: 2rem;
+    margin-top: 0;
+  }
 }

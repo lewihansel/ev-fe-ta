@@ -18,11 +18,11 @@
 
 .menus {
   flex: 1;
-  display: flex;
   gap: 12px;
+  display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: flex-end;
-  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -33,4 +33,15 @@
   &:hover {
     font-weight: 600;
   }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
 }
